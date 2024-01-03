@@ -53,3 +53,20 @@ NOTE: For simplicity, we assume each link is bi-directional with symmetrical cap
 1. Load your traffic data in the traffic.csv
 1. Run `pip install -r requirements.txt`
 1. Run `python main.py`
+
+You'll get an output like this:
+```
+$ python3 main.py 
+Network Details For Traffic Path:  ['G', 'H', 'A']
+source:  G
+destination:  H
+Capaicity:  10
+Capacity Utilization:  50 %
+
+source:  H
+destination:  A
+Capaicity:  10
+Capacity Utilization:  50 %
+
+===================================================
+```
