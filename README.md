@@ -70,3 +70,47 @@ Capacity Utilization:  50 %
 
 ===================================================
 ```
+
+# Handling Worst Case Failure
+The shortest path for traffic to flow from A to B is ['A', 'B'].
+```
+===================================================
+Network Details For Traffic Path:  ['A', 'B']
+source:  A
+destination:  B
+Capaicity:  10
+Capacity Utilization:  30 %
+
+===================================================
+```
+
+Now, let's remove the link between A and B and see how our network reacts.
+We can remove the link by updating the weight to 0.
+```
+# Remove link between A and B
+g.add_edge('A','B',0)
+```
+
+Run the tool and see the output.
+```
+===================================================
+Network Details For Traffic Path:  ['A', 'I', 'B']
+source:  A
+destination:  I
+Capaicity:  10
+Capacity Utilization:  30 %
+
+source:  I
+destination:  B
+Capaicity:  10
+Capacity Utilization:  30 %
+
+===================================================
+```
+
+The network has rearanged itself and has calculated that the shortest path from A to B is through I.
+
+You can play around with this tool by removing different nodes and seeing how the network reacts.
+
+
+

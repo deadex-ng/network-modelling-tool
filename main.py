@@ -27,6 +27,9 @@ for i in range(rows):
     weight = df.iat[i, 4]
     g.add_edge(start_node, end_node, weight)
 
+# Remove link between A and B
+# g.add_edge('A','B',0)
+
 adj_matrix_graph = g.get_graph()
 
 
